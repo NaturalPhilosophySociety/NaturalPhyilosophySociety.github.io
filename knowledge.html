@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="自然哲学社新知万花筒往期内容">
+    <meta name="author" content="Natural Philosophy Society">
+    
+    <title>新知万花筒 - 自然哲学社</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+    
+    <style>
+      .knowledge-item {
+        border-left: 5px solid #007bff;
+        padding-left: 20px;
+        margin-bottom: 30px;
+      }
+      .knowledge-item:hover {
+        border-left: 5px solid #0056b3;
+      }
+      .category-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-size: 0.8em;
+        background-color: #007bff;
+        color: white;
+        margin-bottom: 10px;
+      }
+      .resource-links a {
+        margin-right: 15px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      .resource-links i {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <span class="d-block d-lg-none">自然哲学社</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/avatar.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#experience">Note and Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#education">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#skills">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#interests">Interest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#awards">敬请期待</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="knowledge">
+        <div class="my-auto">
+          <h1 class="mb-0">新知
+            <span class="text-primary">万花筒</span>
+          </h1>
+          
+          <div class="subheading mb-5">捕捉知识的灵感星火</div>
+          
+          <p class="mb-5">厌倦长篇大论？这里是15-20分钟的快闪式知识分享！每一次活动，都聚焦一个精巧有趣的主题——可能是一个颠覆认知的数学发现、一段鲜为人知的科学轶事，或一项前沿技术的核心洞见。用轻松易懂的短讲，点燃你的好奇心；在随后的自由交流中，碰撞思维火花，领略知识碎片折射出的绚丽光彩。加入我们，随时遇见意想不到的思维闪光点，换个角度看世界！</p>
+          
+          <div id="knowledgeContainer">
+            <!-- 内容将通过JavaScript动态生成 -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    
+    <script>
+      // 新知万花筒内容数据
+      const knowledgeItems = [
+        {
+          id: 1,
+          title: "量子纠缠与信息传输",
+          subtitle: "从爱因斯坦的'幽灵般的超距作用'到现代量子通信",
+          content: "探讨量子纠缠现象的本质，以及它如何成为现代量子通信和量子计算的基础。通过生动的比喻解释这一反直觉的量子现象。",
+          category: "物理",
+          date: "2024-03-15",
+          speaker: "王教授",
+          bilibili: "https://www.bilibili.com/video/BV1XX4XXXXX1",
+          slides: "slides/quantum_entanglement.pdf"
+        },
+        {
+          id: 2,
+          title: "拓扑学中的莫比乌斯环",
+          subtitle: "只有一个面的神奇曲面及其在现实世界中的应用",
+          content: "介绍莫比乌斯环的数学特性，以及它在艺术、工程和分子结构中的实际应用。展示拓扑学如何连接抽象数学与现实世界。",
+          category: "数学",
+          date: "2024-04-22",
+          speaker: "李设计师",
+          bilibili: "https://www.bilibili.com/video/BV1YY4YYYYY2",
+          slides: "slides/mobius_topology.pdf"
+        },
+        {
+          id: 3,
+          title: "混沌理论与蝴蝶效应",
+          subtitle: "从天气预报的局限性看复杂系统的行为规律",
+          content: "解释混沌理论的基本概念，以及它如何改变了我们对确定性系统的理解。通过实际案例展示看似随机的现象背后隐藏的规律。",
+          category: "数学",
+          date: "2024-05-18",
+          speaker: "张研究员",
+          bilibili: "https://www.bilibili.com/video/BV1ZZ4ZZZZZ3",
+          slides: "slides/chaos_theory.pdf"
+        },
+        {
+          id: 4,
+          title: "分形几何与自然界",
+          subtitle: "从曼德勃罗集到海岸线长度的奥秘",
+          content: "介绍分形几何的概念，探讨自然界中无处不在的自相似结构，从雪花到山脉，从血管到星系分布。",
+          category: "数学",
+          date: "2024-06-30",
+          speaker: "陈博士",
+          bilibili: "https://www.bilibili.com/video/BV1AA4AAAAA4",
+          slides: "slides/fractal_geometry.pdf"
+        }
+      ];
+
+      // 渲染新知万花筒项目
+      function renderKnowledgeItems() {
+        const container = document.getElementById('knowledgeContainer');
+        let html = '';
+        
+        knowledgeItems.forEach(item => {
+          html += `
+            <div class="knowledge-item">
+              <div class="category-tag">${item.category}</div>
+              <h3 class="mb-0">${item.title}</h3>
+              <div class="subheading mb-2">${item.subtitle}</div>
+              <div class="subheading mb-3">
+                <span class="text-primary">${item.date}</span> | 主讲人：${item.speaker}
+              </div>
+              <p>${item.content}</p>
+              <div class="resource-links">
+                <a href="${item.bilibili}" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-bilibili"></i> 视频回放
+                </a>
+                <a href="${item.slides}" target="_blank" class="btn btn-outline-secondary btn-sm">
+                  <i class="fas fa-file-pdf"></i> 讲义下载
+                </a>
+              </div>
+            </div>
+          `;
+        });
+        
+        container.innerHTML = html;
+      }
+      
+      // 页面加载完成后渲染内容
+      document.addEventListener('DOMContentLoaded', function() {
+        renderKnowledgeItems();
+      });
+    </script>
+  </body>
+</html>

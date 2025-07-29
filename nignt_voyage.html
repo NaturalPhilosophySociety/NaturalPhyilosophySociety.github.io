@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="自然哲学社科学夜航船课程内容">
+    <meta name="author" content="Natural Philosophy Society">
+    
+    <title>科学夜航船 - 自然哲学社</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+    
+    <style>
+      .course-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease;
+      }
+      .course-card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      .course-header {
+        padding: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #f8f9fa;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+      }
+      .course-body {
+        padding: 0;
+        display: none;
+      }
+      .lesson-item {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .lesson-item:last-child {
+        border-bottom: none;
+      }
+      .lesson-item:hover {
+        background-color: #f8f9fa;
+      }
+      .resource-links a {
+        margin-right: 15px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      .resource-links i {
+        margin-right: 5px;
+      }
+      .expand-icon {
+        transition: transform 0.3s ease;
+      }
+      .expanded .expand-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <span class="d-block d-lg-none">自然哲学社</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/avatar.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#experience">Note and Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#education">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#skills">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#interests">Interest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#awards">敬请期待</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="night-voyage">
+        <div class="my-auto">
+          <h1 class="mb-0">科学
+            <span class="text-primary">夜航船</span>
+          </h1>
+          
+          <div class="subheading mb-5">系统传授知识的学术之旅</div>
+          
+          <p class="mb-5">科学夜航船是我们社团的核心课程体系，旨在系统性地传授科学知识。每一期夜航船都围绕一个核心主题展开，通过系列课程的形式，深入浅出地讲解复杂的科学概念。课程内容涵盖从基础概念到前沿研究的各个层面，帮助参与者构建完整的知识体系。加入我们，在知识的海洋中开启一段深入的探索之旅！</p>
+          
+          <div id="coursesContainer">
+            <!-- 课程内容将通过JavaScript动态生成 -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    
+    <script>
+      // 科学夜航船课程数据
+      const courses = [
+        {
+          id: 1,
+          title: "量子场论导论",
+          instructor: "王教授",
+          description: "从经典场论到量子场论的基础概念，涵盖标量场、矢量场与旋量场的量子化，路径积分方法等核心内容。",
+          category: "物理",
+          lessons: [
+            {
+              id: 101,
+              title: "经典场论回顾",
+              date: "2024-09-15",
+              description: "复习经典力学与场论的基本概念，为量子化做准备",
+              bilibili: "https://www.bilibili.com/video/BV1XX4XXXXX1",
+              slides: "slides/qft/lesson1.pdf"
+            },
+            {
+              id: 102,
+              title: "标量场的量子化",
+              date: "2024-09-22",
+              description: "介绍标量场的正则量子化方法，讨论粒子概念的起源",
+              bilibili: "https://www.bilibili.com/video/BV1YY4YYYYY2",
+              slides: "slides/qft/lesson2.pdf"
+            },
+            {
+              id: 103,
+              title: "矢量场与旋量场",
+              date: "2024-09-29",
+              description: "讲解矢量场（光子）和旋量场（电子）的量子化过程",
+              bilibili: "https://www.bilibili.com/video/BV1ZZ4ZZZZZ3",
+              slides: "slides/qft/lesson3.pdf"
+            }
+          ]
+        },
+        {
+          id: 2,
+          title: "微分几何基础",
+          instructor: "李设计师",
+          description: "介绍微分几何的基本概念，为理解广义相对论和现代物理奠定数学基础。",
+          category: "数学",
+          lessons: [
+            {
+              id: 201,
+              title: "流形与张量",
+              date: "2024-10-06",
+              description: "介绍流形的基本概念和张量的定义与运算",
+              bilibili: "https://www.bilibili.com/video/BV1AA4AAAAA4",
+              slides: "slides/dg/lesson1.pdf"
+            },
+            {
+              id: 202,
+              title: "联络与协变导数",
+              date: "2024-10-13",
+              description: "讲解联络的概念和协变导数的定义",
+              bilibili: "https://www.bilibili.com/video/BV1BB4BBBBB5",
+              slides: "slides/dg/lesson2.pdf"
+            },
+            {
+              id: 203,
+              title: "曲率与爱因斯坦场方程",
+              date: "2024-10-20",
+              description: "介绍曲率张量和里奇张量，推导爱因斯坦场方程",
+              bilibili: "https://www.bilibili.com/video/BV1CC4CCCCC6",
+              slides: "slides/dg/lesson3.pdf"
+            }
+          ]
+        },
+        {
+          id: 3,
+          title: "统计物理与相变",
+          instructor: "张研究员",
+          description: "深入探讨统计物理的基本原理和相变理论，连接微观机制与宏观现象。",
+          category: "物理",
+          lessons: [
+            {
+              id: 301,
+              title: "系综理论基础",
+              date: "2024-10-27",
+              description: "介绍微观状态与宏观状态，讲解微正则、正则和巨正则系综",
+              bilibili: "https://www.bilibili.com/video/BV1DD4DDDDD7",
+              slides: "slides/statphys/lesson1.pdf"
+            },
+            {
+              id: 302,
+              title: "相变与临界现象",
+              date: "2024-11-03",
+              description: "讨论相变的分类和临界现象的基本特征",
+              bilibili: "https://www.bilibili.com/video/BV1EE4EEEEE8",
+              slides: "slides/statphys/lesson2.pdf"
+            },
+            {
+              id: 303,
+              title: "重整化群简介",
+              date: "2024-11-10",
+              description: "介绍重整化群方法及其在相变理论中的应用",
+              bilibili: "https://www.bilibili.com/video/BV1FF4FFFFF9",
+              slides: "slides/statphys/lesson3.pdf"
+            }
+          ]
+        }
+      ];
+
+      // 渲染课程卡片
+      function renderCourses() {
+        const container = document.getElementById('coursesContainer');
+        let html = '';
+        
+        courses.forEach(course => {
+          html += `
+            <div class="course-card">
+              <div class="course-header d-flex justify-content-between align-items-center" data-course-id="${course.id}">
+                <div>
+                  <h3 class="mb-1">${course.title}</h3>
+                  <div class="subheading mb-2">${course.instructor} | ${course.category}</div>
+                  <p class="mb-0">${course.description}</p>
+                </div>
+                <div class="expand-icon">
+                  <i class="fas fa-chevron-down fa-2x text-primary"></i>
+                </div>
+              </div>
+              <div class="course-body" id="course-${course.id}">
+                <div class="lessons-container">
+                  ${course.lessons.map(lesson => `
+                    <div class="lesson-item">
+                      <h5 class="mb-1">${lesson.title}</h5>
+                      <div class="subheading mb-2">
+                        <span class="text-primary">${lesson.date}</span>
+                      </div>
+                      <p class="mb-2">${lesson.description}</p>
+                      <div class="resource-links">
+                        <a href="${lesson.bilibili}" target="_blank" class="btn btn-outline-primary btn-sm">
+                          <i class="fab fa-bilibili"></i> 视频回放
+                        </a>
+                        <a href="${lesson.slides}" target="_blank" class="btn btn-outline-secondary btn-sm">
+                          <i class="fas fa-file-pdf"></i> 讲义下载
+                        </a>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        
+        container.innerHTML = html;
+        
+        // 为每个课程标题添加点击事件
+        document.querySelectorAll('.course-header').forEach(header => {
+          header.addEventListener('click', function() {
+            const courseId = this.getAttribute('data-course-id');
+            const courseBody = document.getElementById(`course-${courseId}`);
+            const courseCard = this.parentElement;
+            
+            if (courseBody.style.display === 'block') {
+              courseBody.style.display = 'none';
+              courseCard.classList.remove('expanded');
+            } else {
+              courseBody.style.display = 'block';
+              courseCard.classList.add('expanded');
+            }
+          });
+        });
+      }
+      
+      // 页面加载完成后渲染内容
+      document.addEventListener('DOMContentLoaded', function() {
+        renderCourses();
+      });
+    </script>
+  </body>
+</html>

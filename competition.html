@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="自然哲学社数理基础竞赛">
+    <meta name="author" content="Natural Philosophy Society">
+    
+    <title>数理基础竞赛 - 自然哲学社</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+    
+    <style>
+      .direction-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease;
+      }
+      .direction-card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      .direction-header {
+        padding: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #f8f9fa;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+      }
+      .direction-body {
+        padding: 20px;
+        display: none;
+      }
+      .exam-item {
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .exam-item:hover {
+        background-color: #f8f9fa;
+      }
+      .resource-links a {
+        margin-right: 15px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      .resource-links i {
+        margin-right: 5px;
+      }
+      .expand-icon {
+        transition: transform 0.3s ease;
+      }
+      .expanded .expand-icon {
+        transform: rotate(180deg);
+      }
+      .direction-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <span class="d-block d-lg-none">自然哲学社</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/avatar.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#experience">Note and Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#education">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#skills">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#interests">Interest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#awards">敬请期待</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="competition">
+        <div class="my-auto">
+          <h1 class="mb-0">数理
+            <span class="text-primary">基础竞赛</span>
+          </h1>
+          
+          <div class="subheading mb-5">夯实基础，挑战思维</div>
+          
+          <p class="mb-5">数理基础竞赛是我们社团的重要活动之一，旨在检验和提升成员在数学、物理及相关学科的基础知识水平。竞赛内容涵盖多个方向，通过不同层次的题目设计，考察参赛者的逻辑思维能力、问题解决能力和知识综合运用能力。我们相信扎实的基础是深入研究的前提，通过竞赛的形式激发大家对基础学科的兴趣和热情。</p>
+          
+          <h2 class="mb-4">竞赛方向介绍</h2>
+          
+          <div id="directionsContainer" class="mb-5">
+            <!-- 竞赛方向内容将通过JavaScript动态生成 -->
+          </div>
+          
+          <h2 class="mb-4">往年试题与解析</h2>
+          
+          <div id="examsContainer">
+            <!-- 往年试题内容将通过JavaScript动态生成 -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    
+    <script>
+      // 竞赛方向数据
+      const directions = [
+        {
+          id: "math-phys",
+          title: "数学物理方向",
+          icon: "fa-calculator",
+          description: "面向对数学和物理有浓厚兴趣的同学，考察高等数学、线性代数、概率统计以及经典力学、电磁学、量子力学等物理基础理论。",
+          content: [
+            "数学部分：微积分、线性代数、微分方程、复变函数、概率论与数理统计等",
+            "物理部分：经典力学、热力学与统计物理、电磁学、光学、原子物理、量子力学基础等",
+            "核心素养：抽象思维能力、严密的逻辑推理能力、数学建模能力、物理直觉与洞察力"
+          ]
+        },
+        {
+          id: "matter-sci",
+          title: "物质科学方向",
+          icon: "fa-flask",
+          description: "面向对物质科学领域感兴趣的同学，考察物质结构、性质、变化规律以及相关数理工具的应用。",
+          content: [
+            "物质结构：原子结构、分子结构、晶体结构、材料结构等",
+            "物质性质：物理性质、化学性质、热力学性质、电学性质等",
+            "物质变化：化学反应、相变、材料合成与加工等",
+            "表征方法：光谱学、衍射学、显微学等物质表征技术基础",
+            "核心素养：物质结构与性质关联理解能力、实验观察与分析能力、跨尺度思维"
+          ]
+        },
+        {
+          id: "mech-info",
+          title: "力学信息方向",
+          icon: "fa-microchip",
+          description: "面向对工程力学和信息科学感兴趣的同学，考察力学基础、计算机科学和信息理论知识。",
+          content: [
+            "力学部分：理论力学、材料力学、流体力学基础等",
+            "信息部分：计算机基础、编程语言、数据结构与算法、信息论基础等",
+            "交叉应用：数值计算方法、工程问题建模等",
+            "核心素养：工程问题分析能力、计算思维、系统设计与优化能力"
+          ]
+        }
+      ];
+
+      // 往年试题数据
+      const exams = [
+        {
+          id: 1,
+          year: "2024",
+          title: "2024年度数理基础竞赛试题",
+          description: "包含数学物理、物质科学、力学信息三个方向的完整试题及详细解析",
+          papers: [
+            {
+              name: "数学物理方向试题",
+              paper: "exams/2024/math-phys-paper.pdf",
+              solution: "exams/2024/math-phys-solution.pdf"
+            },
+            {
+              name: "物质科学方向试题",
+              paper: "exams/2024/matter-sci-paper.pdf",
+              solution: "exams/2024/matter-sci-solution.pdf"
+            },
+            {
+              name: "力学信息方向试题",
+              paper: "exams/2024/mech-info-paper.pdf",
+              solution: "exams/2024/mech-info-solution.pdf"
+            }
+          ]
+        },
+        {
+          id: 2,
+          year: "2023",
+          title: "2023年度数理基础竞赛试题",
+          description: "首次举办的数理基础竞赛试题集，包含各方向经典题目",
+          papers: [
+            {
+              name: "数学物理方向试题",
+              paper: "exams/2023/math-phys-paper.pdf",
+              solution: "exams/2023/math-phys-solution.pdf"
+            },
+            {
+              name: "物质科学方向试题",
+              paper: "exams/2023/matter-sci-paper.pdf",
+              solution: "exams/2023/matter-sci-solution.pdf"
+            },
+            {
+              name: "力学信息方向试题",
+              paper: "exams/2023/mech-info-paper.pdf",
+              solution: "exams/2023/mech-info-solution.pdf"
+            }
+          ]
+        },
+        {
+          id: 3,
+          year: "2022",
+          title: "2022年度数理基础竞赛试题",
+          description: "早期竞赛试题，为后续竞赛奠定了基础框架",
+          papers: [
+            {
+              name: "数学物理方向试题",
+              paper: "exams/2022/math-phys-paper.pdf",
+              solution: "exams/2022/math-phys-solution.pdf"
+            },
+            {
+              name: "物质科学方向试题",
+              paper: "exams/2022/matter-sci-paper.pdf",
+              solution: "exams/2022/matter-sci-solution.pdf"
+            },
+            {
+              name: "力学信息方向试题",
+              paper: "exams/2022/mech-info-paper.pdf",
+              solution: "exams/2022/mech-info-solution.pdf"
+            }
+          ]
+        }
+      ];
+
+      // 渲染竞赛方向卡片
+      function renderDirections() {
+        const container = document.getElementById('directionsContainer');
+        let html = '';
+        
+        directions.forEach(direction => {
+          html += `
+            <div class="direction-card">
+              <div class="direction-header d-flex justify-content-between align-items-center" data-direction-id="${direction.id}">
+                <div class="d-flex align-items-center">
+                  <i class="fas ${direction.icon} direction-icon"></i>
+                  <div>
+                    <h3 class="mb-1">${direction.title}</h3>
+                    <p class="mb-0">${direction.description}</p>
+                  </div>
+                </div>
+                <div class="expand-icon">
+                  <i class="fas fa-chevron-down fa-2x text-primary"></i>
+                </div>
+              </div>
+              <div class="direction-body" id="direction-${direction.id}">
+                <ul class="mb-0">
+                  ${direction.content.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        });
+        
+        container.innerHTML = html;
+        
+        // 为每个方向标题添加点击事件
+        document.querySelectorAll('.direction-header').forEach(header => {
+          header.addEventListener('click', function() {
+            const directionId = this.getAttribute('data-direction-id');
+            const directionBody = document.getElementById(`direction-${directionId}`);
+            const directionCard = this.parentElement;
+            
+            if (directionBody.style.display === 'block') {
+              directionBody.style.display = 'none';
+              directionCard.classList.remove('expanded');
+            } else {
+              directionBody.style.display = 'block';
+              directionCard.classList.add('expanded');
+            }
+          });
+        });
+      }
+      
+      // 渲染往年试题
+      function renderExams() {
+        const container = document.getElementById('examsContainer');
+        let html = '';
+        
+        exams.forEach(exam => {
+          html += `
+            <div class="exam-item">
+              <h3 class="mb-2">${exam.title}</h3>
+              <p class="mb-3">${exam.description}</p>
+              <div class="row">
+                ${exam.papers.map(paper => `
+                  <div class="col-md-6 col-lg-4 mb-2">
+                    <div class="resource-links">
+                      <a href="${paper.paper}" target="_blank" class="btn btn-outline-primary btn-sm w-100 mb-2">
+                        <i class="fas fa-file-pdf"></i> ${paper.name}
+                      </a>
+                      <a href="${paper.solution}" target="_blank" class="btn btn-outline-secondary btn-sm w-100">
+                        <i class="fas fa-book"></i> 解析
+                      </a>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        });
+        
+        container.innerHTML = html;
+      }
+      
+      // 页面加载完成后渲染内容
+      document.addEventListener('DOMContentLoaded', function() {
+        renderDirections();
+        renderExams();
+      });
+    </script>
+  </body>
+</html>
